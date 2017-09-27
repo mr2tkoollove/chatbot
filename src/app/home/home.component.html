@@ -1,0 +1,9 @@
+<div *ngIf="selectedStore">
+  <div *ngIf="isLogin">
+    <app-dashboard [fbUser] = "fbUser" [currentPage] = "currentPage"
+                   [store] = "selectedStore.store"></app-dashboard>
+  </div>
+  <div *ngIf="!isLogin">
+    <app-login></app-login>
+  </div>
+</div>

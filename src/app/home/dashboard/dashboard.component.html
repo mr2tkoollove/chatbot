@@ -1,0 +1,129 @@
+<div *ngIf="!currentPage && !isLogout">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <label for="field_page">Lựa chọn Page</label>
+      <select class="form-control" id="field_page" name="page" [(ngModel)]="selectedPage">
+        <option [ngValue]="page" *ngFor="let page of listPage;">{{page.name}}</option>
+      </select>
+
+    </div>
+    <div class="col-md-6 form-group">
+      <br/>
+      <button type="button" class="btn btn-primary" (click)="setPage()">
+        <span class="fa fa-save"></span>&nbsp;<span>Lưu</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!currentPage && isLogout" class="row">
+  <div class="col-md-6">
+    <label>Đăng nhập vào facebook để sử dụng chức năng này</label>
+  </div>
+  <div class="col-md-6">
+    <button type="button" class="btn btn-primary" (click)="getCode()">
+      <span class="fa fa-save"></span>&nbsp;<span>Đăng nhập vào Facebook</span>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="currentPage" style="padding-left: 20px;padding-top: 20px">
+  <div class="row">
+    <div class="col-md-4 form-group">
+      <label>Page đã chọn</label>
+      <b>{{currentPage.name}}</b>
+    </div>
+    <div class="col-md-6 form-group">
+      <button type="button" class="btn btn-primary" (click)="clearPage()">
+        <span class="fa fa-save"></span>&nbsp;<span>Chọn Page khác</span>
+      </button>
+    </div>
+  </div>
+
+  <div style="border-bottom:solid 1px #a8a8a8;margin-bottom:1px;margin-top:0;line-height: 1px;height: 1px; width: 50%"> 
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <label for="field_started">Nội dung lời chào mừng</label>
+      <textarea rows="2" id="field_started" class="form-control" name="startedButtonText"
+                [(ngModel)]="startedButtonText">
+             </textarea>
+    </div>
+    <div class="col-md-6 form-group">
+      <br/>
+      <button type="button" class="btn btn-primary" (click)="setStartedText()">
+        <span class="fa fa-save"></span>&nbsp;<span>Lưu</span>
+      </button>
+    </div>
+  </div>
+  <div style="border-bottom:solid 1px #a8a8a8;margin-bottom:1px;margin-top:0;line-height: 1px;height: 1px; width: 50%;">
+     
+  </div>
+  <br/>
+  <div style="width: 50%">
+    <label>Lựa chọn chức năng main menu (Tối đa 3 chức năng)</label>
+    <br/>
+    <label for="field_started1">lời chào</label>
+    <textarea rows="2" id="field_started1" class="form-control" name="textMainMenu"
+              [(ngModel)]="textMainMenu">
+             </textarea>
+    <label for="field_main_menu_1">Chức năng 1</label>
+    <select class="form-control" id="field_main_menu_1" name="main_menu_1" [(ngModel)]="mainMenu1">
+      <option title="{{payload.description}}" [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+
+    <label for="field_main_menu_2">Chức năng 2</label>
+    <select class="form-control" id="field_main_menu_2" name="main_menu_2" [(ngModel)]="mainMenu2">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+
+    <label for="field_main_menu_3">Chức năng 3</label>
+    <select class="form-control" id="field_main_menu_3" name="main_menu_3" [(ngModel)]="mainMenu3">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+    <button type="button" class="btn btn-primary" style="padding-top: 10px;" (click)="setMainMenu()">
+      <span class="fa fa-save"></span>&nbsp;<span>Lưu</span>
+    </button>
+  </div>
+  <div
+    style="border-bottom:solid 1px #a8a8a8;margin-bottom:1px;margin-top:10px;line-height: 1px;height: 1px;width: 50%"> 
+  </div>
+  <br/>
+  <div style="width: 50%">
+    <label>Lựa chọn chức năng persistent menu (Tối đa 3 chức năng)</label>
+    <br/>
+    <label for="field_p_menu_1">Chức năng 1</label>
+    <select class="form-control" id="field_p_menu_1" name="p_menu_1" [(ngModel)]="persistentMenu1">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+
+    <label for="field_p_menu_2">Chức năng 2</label>
+    <select class="form-control" id="field_p_menu_2" name="p_menu_2" [(ngModel)]="persistentMenu2">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+
+    <label> Xem thêm </label>
+    <br/>
+    <label for="field_a_menu_1">Chức năng phụ 1</label>
+    <select class="form-control" id="field_a_menu_1" name="a_menu_1" [(ngModel)]="additionalPMenu1">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+    <label for="field_a_menu_2">Chức năng phụ 2</label>
+    <select class="form-control" id="field_a_menu_2" name="a_menu_2" [(ngModel)]="additionalPMenu2">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+    <label for="field_a_menu_3">Chức năng phụ 3</label>
+    <select class="form-control" id="field_a_menu_3" name="a_menu_3" [(ngModel)]="additionalPMenu3">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+    <label for="field_a_menu_4">Chức năng phụ 4</label>
+    <select class="form-control" id="field_a_menu_4" name="a_menu_4" [(ngModel)]="additionalPMenu4">
+      <option [ngValue]="payload.code" *ngFor="let payload of listPayLoad;">{{payload.name}}</option>
+    </select>
+    <br/>
+    <button type="button" class="btn btn-primary" (click)="setPersistentMenu()">
+      <span class="fa fa-save"></span>&nbsp;<span>Lưu</span>
+    </button>
+  </div>
+</div>

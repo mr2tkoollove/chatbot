@@ -1,0 +1,36 @@
+<div class="page-sidebar navbar-collapse collapse" id="page-sidebar">
+    <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-light" id="sidebar" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        <li class="sidebar-toggler-wrapper hide">
+            <div class="sidebar-toggler">
+                <span></span>
+            </div>
+        </li>
+        <!-- END SIDEBAR TOGGLER BUTTON -->
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="collapsedSidebarResponsive()">
+        <a class="nav-link" href="/?store={{store}}">
+                <i class="icon-home"></i>
+                <span class="title">Trang chủ</span>
+            </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="collapsedSidebarResponsive()">
+            <a class="nav-link " href="/app-account?store={{store}}">
+                <i class="icon-user"></i>
+                <span class="title">Account</span>
+            </a>
+        </li>
+
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="collapsedSidebarResponsive()">
+            <a class="nav-link " href="/cart?store={{store}}">
+                <i class="icon-target"></i>
+                <span class="title">Cart</span>
+            </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']"  (click)="collapsedSidebarResponsive()">
+            <a class="nav-link" href="/guide?store={{store}}">
+                <i class="icon-link"></i>
+                <span class="title">Hướng dẫn sử dụng</span>
+            </a>
+        </li>
+    </ul>
+</div>

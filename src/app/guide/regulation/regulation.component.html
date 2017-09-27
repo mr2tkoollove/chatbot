@@ -1,0 +1,107 @@
+<div [ngClass]="{'page-policy' : !isAuthenticated()}">
+    <h1 class="page-title">Quy định & Điều khoản</h1>
+    <jhi-alert-error></jhi-alert-error>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="profile-sidebar">
+                <div class="portlet light profile-sidebar-portlet ">
+                    <div class="profile-usermenu">
+                        <ul class="nav">
+                            <li *ngIf="!isAuthenticated()">
+                                <a [routerLink]="['/']">
+                                    <i class="icon-home"></i> Về trang chủ </a>
+                            </li>
+                            <li class="active">
+                                <a [routerLink]="['/policies/regulation']">
+                                    <i class="icon-user"></i> Quy định & Điều khoản </a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/policies/payment']">
+                                    <i class="icon-credit-card"></i> Chính sách thanh toán </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-content">
+                <div class="portlet light main-content">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">QUY ĐỊNH ĐIỂU KHOẢN SỬ DỤNG AFF.DKT.COM.VN DÀNH CHO AFFILIATE ( GIỚI THIỆU KHÁCH HÀNG CHO DKT)</span>
+                    </div>
+                    <div class="table-responsive">
+                        <h3>ĐIỀU 1: ĐỊNH NGHĨA</h3>
+                        <p>1.	<strong>"Bên A"</strong> công ty cổ phần công nghệ DKT, đơn vị cung cấp các dịch vụ Bizweb, Sapo, DKTmedia ( quảng cáo Google Adword và quảng cáo Facebook)</p>
+                        <p>2.	<strong>"Bên B"</strong> được hiểu là một cá nhân, tập thể muốn nhận hoa hồng thông qua việc giới thiệu khách hàng sử dụng dịch vụ của Bên A bằng cách giới thiệu khách hàng trực tiếp hoặc đăng các quảng cáo, chia sẻ link phân phối … nhằm giới thiệu khách hàng cho bên A</p>
+                        <p>3.	<strong>"Trang mạng"</strong> được hiểu là một trang mạng Internet do Bên B vận hành, quản lý và được Bên B dùng để khai thác giới thiệu khách hàng cho bên A</p>
+                        <h3>ĐIỀU 2. PHẠM VI VÀ CÁCH THỨC HỢP TÁC</h3>
+                        <p>1.	Nếu khách hàng bên B giới thiệu hoặc nhấp vào các link phân phối của bên B, phát sinh việc ký kết hợp đồng sử dụng dịch vụ của bên A và tiến hành thanh toán cho bên A, thì bên B sẽ nhận được tiền hoa hồng từ khách hàng giới thiệu, số tiền hoa hồng phụ thuộc vào quy định tính hoa hồng của mỗi dịch vụ.</p>
+                        <p>2.	Bằng việc đăng ký tài khoản thành công với Bên A, Bên B đồng thời hoàn toàn đồng ý chấp nhận toàn bộ các điều khoản hợp tác cũng như các quy định hợp tác, quy định thanh toán có ghi trên website hợp tác của Bên A.</p>
+                        <p>3.	Nếu bên B thuộc một trong các trường hợp sau đây thì Bên A có khả năng từ chối việc đăng ký tài khoản. Thêm vào đó, nếu sau khi được chấp thuận mà Bên A phát hiện ra bên B cũng thuộc một trong các trường hợp sau thì Bên A có thể hủy bỏ việc đăng kí dựa theo các qui định của điều khoản cam kết:</p>
+                        <p>a.	Người đăng ký chưa đủ 18 tuổi;</p>
+                        <p>b.	Trong thông tin đăng ký chứa đựng thông tin không chính xác;</p>
+                        <p>c.	Người đăng ký cung cấp hàng hóa hay dịch vụ có tính khiêu dâm và quảng cáo dịch vụ của bên A trên những trang này;</p>
+                        <p>d.	Người đăng ký có liên quan đến các hoạt động đầu tư lừa đảo, bán hàng đa cấp hay các hình thức tương tự;</p>
+                        <p>e.	Người đăng ký tham gia các hoạt động bất hợp pháp hay chống đối xã hội;</p>
+                        <p>f.	Các trường hợp khác mà Bên A xét thấy không phù hợp</p>
+                        <p>4.	Trường hợp Người đăng ký vận hành trang mạng thuộc một trong các trường hợp sau thì Bên A có khả năng từ chối đơn đăng kí. Thêm vào đó, nếu sau khi được chấp thuận mà Bên A phát hiện ra trang mạng nêu trên cũng thuộc một trong các trường hợp sau thì Bên A có thể hủy bỏ việc đăng kí dựa theo các qui định của Hợp đồng:</p>
+                        <p>a.	Trang mạng chứa đựng nội dung tục tĩu, khiêu dâm;</p>
+                        <p>b.	Trang mạng chứa đựng nội dung vi phạm Bản quyền tác giả, Bản quyền thương mại, nội dung từ các tên miền được biết đến rộng rãi hay các quyền sở hữu tài sản trí tuệ;</p>
+                        <p>c.	Trang mạng chứa đựng nội dung có tính phỉ báng, bôi nhọ, cản trở việc kinh doanh, vi phạm danh dự, quyền riêng tư, quyền hình ảnh hay các hình thức tương tự;</p>
+                        <p>d.	Trang mạng có liên quan đến các hoạt động đầu tư lừa đảo, bán hàng đa cấp hay các hình thức tương tự hoặc tham gia giới thiệu các hoạt động trên;</p>
+                        <p>e.	Trang mạng có liên quan đến cờ bạc, cá cược (ngoại trừ các trò chơi do Nhà nước vận hành, sổ xố hay các trò chơi hợp pháp);</p>
+                        <p>f.	Trang mạng chứa đựng nội dung vi phạm pháp luật hiện hành, các sắc lệnh, các qui định trong ngành, v.v, hay các nội dung trái luật và chống đối xã hội;</p>
+                        <p>g.	Trang mạng chứa đựng nội dung công kích lại trật tự và đạo đức cộng đồng;</p>
+                        <p>h.	Trang mạng chứa đựng nội dung về tôn giáo;</p>
+                        <h3>ĐIỀU 3. QUY ĐỊNH VỀ VIỆC TÍNH KHÁCH HÀNG GIỚI THIỆU VÀ HOA HỒNG.</h3>
+                        <p>1.	Khách hàng giới thiệu được tính là hợp lệ khi thông tin số điện thoại, email không trùng với các khách hàng đã có trên hệ thống CRM của DKT. Trường hợp thông tin khách hàng được bên B giới thiệu đã tồn tại trên hệ thống CRM của DKT hệ thống Aff.dkt.com.vn sẽ thông báo là “Trùng”.  Trường hợp thông tin khách hàng được bên B nhập, có số điện thoại có định dạng không đủ số, thừa số, có số tiến dần đều hoặc lùi dần đều…hệ thống aff.dkt.com.vn sẽ thông báo là “Không hợp lệ”</p>
+                        <p>2.	Hoa hồng bên B được hưởng được tính trên các khách hàng giới thiệu hợp lệ, khi khách hàng tiến hành ký hơp đồng và thanh toán cho bên A</p>
+                        <p>3.	Bên B sẽ được nhận hoa hồng khi khách hàng do bên B giới thiệu ký hợp đồng và thanh toán chi phí cho bên A.</p>
+                        <p>4.	Các quy định về chính sách thanh toán, sẽ được quy định tại chính sách thanh toán.</p>
+                        <h3>ĐIỀU 4. GIÁM SÁT</h3>
+                        <p>1.	Bên A sẽ tự thực hiện công tác giám sát để xác định Bên B có tuân theo qui định của điều khoản sử dụng hay không.</p>
+                        <p>2.	Trường hợp qua việc giám sát, Bên A xác định rằng Bên B có các hành động vi phạm điều khoản sử dụng hay các hành động bất hợp pháp, hành vi sai trái vi phạm pháp luật hiện hành hoặc các hành động có tính chất tương tự (sau đây gọi chung là “Hành vi vi phạm”), Bên A có thể từ chối thanh toán toàn bộ hay một phần tiền hoa hồng</p>
+                        <p>3.	Trường hợp qua việc giám sát, Bên B bị phát hiện thực hiện Hành vi vi phạm, Bên A có thể hủy bỏ đăng kí của Bên B mà không cần có yêu cầu. Trường hợp Bên A chịu tổn thất do Hành vi vi phạm của Bên B,  Bên A có quyền yêu cầu Bên B bồi thường thiệt hại. Thêm vào đó, nếu Hành vi vi phạm của Bên B có tính chất hiểm độc và cố ý, Nhà cung cấp hoặc Bên A có thể áp dụng các biện pháp như khởi kiện hình sự.</p>
+                        <h3>ĐIỀU 5. BẢO TRÌ CÁC DỊCH VỤ</h3>
+                        <p>Việc bảo trì các dịch vụ do bên A cung cấp có thể được thực hiện định kì hoặc không theo định kì. Bên B và Bên A cùng không được khiếu nại về việc tạm ngưng Các dịch vụ hay các tổn thất phát sinh trong thời gian bảo trì khi có thông tin chính đáng về dịch vụ.</p>
+                        <h3>ĐIỀU 6. QUẢN LÝ TÊN TRUY CẬP VÀ MẬT MÃ</h3>
+                        <p>1.	Bên B chịu mọi trách nhiệm về việc sử dụng và quản lí Tên truy cập và mật mã do Bên A cung cấp.</p>
+                        <p>2.	Bên B sẽ không để bên thứ ba sử dụng Tên truy cập và/ hoặc mật mã nêu trên và không được cho mượn, ủy nhiệm hay chuyển nhượng Tên truy cập và/ hoặc mật mã để làm vật đảm bảo hay nhằm làm lợi cho bên thứ ba.</p>
+                        <p>3.	Trường hợp bên B làm lộ tên truy cập, mật mã hoặc cho mượn dẫn đến việc gây ra mất mát tiền hoa hồng, khách hàng …. Bên A sẽ không chịu trách nhiệm</p>
+                        <h3>ĐIỀU 7. TUÂN THỦ PHÁP LUẬT LIÊN QUAN ĐẾN QUẢNG CÁO</h3>
+                        <p>1.	Bản quyền tác giả:</p>
+                        <p>2.	Bên B không được, thể hiện rõ hay ngụ ý, quảng cáo, mô tả, phát hành các bài viết không đúng sự thật, thái quá hay gây hiểu nhầm liên quan đến sản phẩm dịch vụ của bên A</p>
+                        <p>3.	Bên B sẽ tuân thủ luật pháp và các qui định hiện hành của Việt Nam liên quan đến vận hành trang mạng và đăng tải quảng cáo, các đạo luật hay sắc lệnh kiểm soát việc đăng tải quảng cáo, và không thực hiện hành vi gạ gẫm Khách thăm, hành động ngăn chặn lợi ích của Khách thăm, hành động gây hiểu lầm các tác dụng bằng các diễn giải thái quá.</p>
+                        <h3>ĐIỀU 8. HỦY BỎ ĐĂNG KÝ</h3>
+                        <p>1.	Trường hợp xảy ra một trong các tình huống sau, Bên A có toàn quyền hủy đăng kí của Bên B bằng cách thông báo cho Bên B và không yêu cầu khắc phục. Nếu đăng kí của Bên B bị hủy, các link phân phối cũng sẽ không còn hiệu lực. Trường hợp Bên B hay bên thứ ba bị bất lợi hay thiệt hại do việc hủy đăng kí, Bên A không chịu trách nhiệm vì bất kì lý do gì.</p>
+                        <p>a.	Phát hiện bất kì sai lệch nào trong thông tin đăng kí tham gia Các dịch vụ;</p>
+                        <p>b.	Không thực hiện các thông báo cần thiết cho Bên A, gây cản trở cho việc chăm sóc, tư vấn ký kết hợp đồng và triển hai dịch vụ của Bên A</p>
+                        <p>c.	Bên A không liên lạc được với Bên B, gây ra cản trở cho việc vận hành quản lý Các dịch vụ;</p>
+                        <p>d.	Bên B vi phạm điều khoản sử dụng và không thể khắc phục vi phạm khi có yêu cầu tìm cách khắc phục</p>
+                        <p>e.	Khi Bên A xét thấy  Bên B có hành vi không trung thực hay không đáng tin cậy.</p>
+                        <p>f.	Bên B không đăng nhập vào Trang quản lý hay không khách hàng được giới thiệu trong suốt 1 năm trở lên; hoặc Bên A xét thấy Bên B không phù hợp.</p>
+                        <p>2.	Trường hợp đơn đăng kí bị hủy bỏ dựa theo các qui định tại điều 8.1, Bên A sẽ không chịu trách nhiệm với những thiệt hại phát sinh cho bên B</p>
+                        <h3>ĐIỀU 9. XỬ LÝ THÔNG TIN CÁ NHÂN</h3>
+                        <p>1.	Bên A sẽ tuân thủ theo “Chính sách riêng tư” được thiết lập riêng biệt cho việc xử lý thông tin cá nhân (được hiểu là các thông tin có thể giúp xác định danh tính của cá nhân như tên, ngày sinh hay các thông tin mô tả khác) mà Bên A có được.</p>
+                        <p>2.	Nếu xảy ra một trong các trường hợp sau, Bên A có thể tiết lộ các thông tin đăng kí và dữ liệu giao dịch của Bên B thu được từ việc đăng ký tài khoản: Tòa án, công an, cơ quan thuế hay các đại diện hành chính khác phát lện hay tiến hành điều tra.</p>
+                        <h3>ĐIỀU 10. BẢO MẬT THÔNG TIN</h3>
+                        <p>Bên B không được tiết lộ cho bên thứ ba các thông tin về công nghệ, công việc kinh doanh, doanh thu của Bên A có được liên quan đến việc tham gia giới thiệu khách hàng và được công nhận là thông tin mật, ngoại trừ các thông tin đăng trên các tên miền công cộng. Qui định này sẽ tiếp tục có hiệu lực sau khi Đơn đăng kí của Bên B bị hủy bỏ.</p>
+                        <h3>ĐIỀU 11. TẠM NGỪNG, THAY ĐỔI, ĐIỀU CHỈNH, BỔ SUNG VÀ XÓA BỎ CÁC DỊCH VỤ.</h3>
+                        <p>Bên A có thể tạm ngưng, thay đổi, điều chỉnh, bổ sung hay xóa bỏ Các dịch vụ vào bất kì thời điểm nào.Nếu thấy cần thiết, Bên A có thể thông báo trước cho Bên B về các hành động nêu</p>
+                        <h3>ĐIỀU 12. KHÔNG ỦY NHIỆM CÁC QUYỀN LỢI</h3>
+                        <p>Trừ trường hợp có văn bản đồng thuận trước từ Bên A, Bên B không được ủy nhiệm một phần hay toàn bộ các quyền lợi cho bên thứ ba, không chuyển nhượng các quyền trên làm vật đảm bảo hay cho phép bên thứ ba sử dụng các quyền trên.</p>
+                        <h3>ĐIỀU 13. TRƯỜNG HỢP BẤT KHẢ KHÁNG</h3>
+                        <p>Bên A không chịu trách nhiệm về việc không thực thi hay trì hoãn toàn bộ hay một phần các dịch vụ Bên A cung cấp vì các nguyên nhân nằm ngoài tầm kiểm soát của Bên A bao gồm: thiên tai, hỏa hoạn, động đất, biểu tình, lũ lụt, bão, dịch bệnh, bạo động, khủng bố, chiến tranh, các đạo luật chính phủ, tình trạng gián đoạn, hư hỏng dịch vụ liên lạc hay đường truyền Internet.</p>
+                        <h3>ĐIỀU 14. HIỆU LỰC ĐIỀU KHOẢN SỬ DỤNG</h3>
+                        <p>1.	Điều khoản sử dụng được áp dụng và có hiệu lực kể từ khi bên B đăng ký thành công tài khoản tham gia aff.dkt.com.vn.</p>
+                        <p>2.	Các điều khoản sử dụng có thể được thay đổi hay bổ sung vào bất kì thời điểm nào tùy vào Bên A và Bên B được xem là chấp thuận các thay đổi, bổ sung khi được thông báo và tiếp tục tham gia Các dịch vụ.</p>
+                        <h3>ĐIỀU 15. LUẬT ĐIỀU CHỈNH</h3>
+                        <p>1.	Mọi tranh chấp và xung đột phát sinh liên quan đến Điều khoản sử dụng dịch vụ này sẽ do hai Bên giải quyết một cách thiện chí nhất có thể.</p>
+                        <p>2.	Mọi tranh chấp hay xung đột không thể giải quyết theo thiện chí sẽ được khởi kiện ra tòa án pháp luật và chịu phán quyết theo luật định, theo đây, Bên A và Bên B chấp thuận thẩm quyền phán xét của Tòa án có thẩm quyền trong việc thẩm vấn và giải quyết các vụ kiện.</p>
+                        <p><i>Bằng việc đăng ký tài khoản thành công trên hệ thống http:// aff.dkt.com vn, Bên B đồng nghĩa với việc chấp thuận các điều khoản trong Quy Định Hợp Tác này của Bên A.</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div *ngIf="store">
+<div class="page-wrapper">
+    <div class="page-container">
+      <div class="page-sidebar-wrapper">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="page-content-wrapper">
+        <div class="page-content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--<div *ngIf="!isLogin">-->
+  <!--<router-outlet></router-outlet>-->
+<!--</div>-->
+</div>
+<div *ngIf="!store">
+  <router-outlet></router-outlet>
+</div>

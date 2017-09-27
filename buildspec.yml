@@ -1,0 +1,23 @@
+version: 0.2
+phases:
+ install:
+ commands:
+ - echo Installing Mocha...
+ - npm install -g mocha
+ - npm install -g @angular/cli
+ pre_build:
+ commands:
+ - echo Installing source NPM dependencies...
+ - npm install unit.js
+ - ng build
+ build:
+ commands:
+ - echo Build started on `date`
+ - echo Compiling the Node.js code
+ - mocha app.js
+ post_build:
+ commands:
+ - echo Build completed on `date`
+artifacts:
+ files:
+ - app.js

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DKT Chatbot</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://bizweb.dktcdn.net/assets/external/app.js"></script>
+  <script type="text/javascript">
+    var url = new URL(window.location.href);
+    var store = url.searchParams.get("store");
+    if(store) {
+      BizwebApp.init({
+        apiKey: '7bc8d247b1f54b82bc0af25f6fc9f405',
+//      shopOrigin: 'https://quynm3101.bizwebvietnam.net'
+//      apiKey: [[${@environment.getProperty('bizweb.consumerKey')}]],
+        shopOrigin: 'https://'+store
+      });
+    }
+
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
