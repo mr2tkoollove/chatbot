@@ -9,16 +9,13 @@ WORKDIR /messenger-app/src/app
 # Install NPM
 COPY package.json /messenger-app/src/app/
 RUN npm install
+RUN npm install -g @angular/cli
 
 #Install dist folder
 RUN ng build
 
 # Bundle app source
 COPY . /messenger-app/src/app
-
-# Install and run Bower
-RUN npm install -g bower
-RUN bower install
 
 EXPOSE 3001
 
