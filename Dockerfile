@@ -11,11 +11,11 @@ COPY package.json /messenger-app/src/app/
 RUN npm install
 RUN npm install -g @angular/cli
 
-#Install dist folder
-RUN ng build
-
 # Bundle app source
 COPY . /messenger-app/src/app
+
+#Install dist folder
+RUN ng build
 
 EXPOSE 3001
 
